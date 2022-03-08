@@ -1,0 +1,53 @@
+.hero {
+    width: 100vw;
+    height: 96vh;
+    background-color: rgb(77, 76, 76);
+}
+.hero-body {
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: space-around;
+}
+.typeContainer{
+    width: 43vw;
+    text-align: center;
+    height:60vh ;
+}
+.typed-text{
+    color:white ;
+    font-size: 56px;
+    height: 70vh ;
+    width: 40vw;
+    line-height: 75px;
+}
+.images-container{
+  display: grid;
+  grid-template-rows: 140px 140px;
+  grid-template-columns: 140px 140px;
+  column-gap: 50px;
+  row-gap: 50px;
+  margin-right: -45px;
+}
+.typed-cursor {
+    font-size: 56px;
+}
+.image-log {
+    width: 100%;
+    height: 100%;
+}
+.helloww{
+    color :rgb(24, 183, 139);
+    margin: 50px;
+    text-decoration: none;
+}
+.helloww:hover{
+    color: #00D8FF;
+}
+.my-way {
+    text-decoration : none ; color : #8CC84B
+}
+.my-way:hover{
+    color : #599636
+}
