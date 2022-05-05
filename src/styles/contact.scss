@@ -1,0 +1,55 @@
+.contact {
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh ;
+    .conatctForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 55%;
+        .form_input{
+            border: 0.5px #0b4870 solid;
+            outline: none;
+            padding: 9px;
+            font-size: 15px;
+        }
+        textarea{
+            height: 90px;
+        }
+        .sendBtn{
+            background-color: inherit;
+            border:0.5px #0b4870 solid ;
+            padding: 5px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 12px;
+            color: #0b4870;
+            &:hover{
+                background-color: #0b4870;
+                color: white;
+            }
+        }
+        .contactHeader,.form_header{
+            color: #0e517ee8;
+        }
+        .infoContact{
+            padding: 13px 0;
+            .toWorkButton{
+                padding: 0;
+                border: 0;
+                &:hover{
+                    background-color: inherit;
+                    color: #be8e41;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+  }
+}
