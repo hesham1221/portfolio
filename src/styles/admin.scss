@@ -1,0 +1,41 @@
+.admin {
+  display: grid;
+  place-items: center;
+  .adminFormContainer {
+    padding-top: 70px;
+    width: 500px;
+    .adminForm {
+      display: flex;
+      flex-direction: column;
+      .adminHeader,
+      .adminText {
+        color: #0b4870;
+        margin-bottom: 7px;
+      }
+      .adminInput {
+        padding: 5px;
+        font-size: 16px;
+        border: #0b4870 1px solid;
+        outline: none;
+      }
+      .adminSubmit {
+        background-color: inherit;
+        color: #0b4870;
+        font-size: 17px;
+        border: 0.5px #0b4870 solid;
+        cursor: pointer;
+        padding: 10px 13px;
+        display: flex;
+        width: 60px;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-top: 10px;
+        &:hover {
+          background-color: #0b4870;
+          color: white;
+        }
+      }
+    }
+  }
+}
