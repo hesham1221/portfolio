@@ -10,7 +10,7 @@ import {
   BsArrowRightShort,
 } from "react-icons/bs";
 import { useNavigate } from "react-router";
-const Contact = () => {
+const Contact = ({isAdmin,setIsAdmin}) => {
   const [suc, setsuc] = useState(false);
   const [fai, setFai] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -41,7 +41,7 @@ const Contact = () => {
   };
   return (
     <div className="contact">
-      <Navbar />
+      <Navbar setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>
       <div className="formContainer">
         <form onSubmit={submitHandler} className="conatctForm">
           <div className="head">

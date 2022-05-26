@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-const Work = () => {
+const Work = ({isAdmin,setIsAdmin}) => {
   return (
     <div className='work'>
-        <Navbar />
+        <Navbar workSelected={true} setIsAdmin={setIsAdmin} isAdmin={isAdmin} />
     </div>
   )
 }

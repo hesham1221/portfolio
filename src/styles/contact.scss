@@ -3,97 +3,100 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh ;
-    .conatctForm{
+    min-height: 80vh;
+    .conatctForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 55%;
+
+      .head {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 55%;
-        .form_input{
-            border: 0.5px #0b4870 solid;
-            outline: none;
-            padding: 9px;
-            font-size: 15px;
+        justify-content: space-between;
+        .suc {
+          color: rgba(2, 110, 2, 0.685);
         }
-        .head{
-            display: flex;
-            justify-content: space-between;
-            .suc{
-                color: rgba(2, 110, 2, 0.685);
-            }
-            .fai{
-                color: red;
-            }
-              .loading-spinner {
-                width: 30px;
-                height: 30px;
-                border: 5px solid #f3f3f3; /* Light grey */
-                border-top: 5px solid #be8e41; /* Black */
-                border-radius: 50%;
-                animation: spinner 1.5s linear infinite;
-              }
+        .fai {
+          color: red;
         }
-        .success {
-            border-color: green;
-            outline: 2px rgba(0, 128, 0, 0.26);
-            box-shadow: 0.5px 0.3px 1px rgba(2, 102, 2, 0.685) ;
+        .loading-spinner {
+          width: 30px;
+          height: 30px;
+          border: 5px solid #f3f3f3; /* Light grey */
+          border-top: 5px solid #be8e41; /* Black */
+          border-radius: 50%;
+          animation: spinner 1.5s linear infinite;
         }
-        .failed{
-            border-color: red;
-            outline: 2px rgba(255, 0, 0, 0.281);
-            box-shadow: 0.5px 0.3px 1px rgba(255, 0, 0, 0.603) ;
-        }
-        textarea{
-            height: 90px;
-        }
-        .sendBtn{
+      }
+      .success {
+        border-color: green;
+        outline: 2px rgba(0, 128, 0, 0.26);
+        box-shadow: 0.5px 0.3px 1px rgba(2, 102, 2, 0.685);
+      }
+      .failed {
+        border-color: red;
+        outline: 2px rgba(255, 0, 0, 0.281);
+        box-shadow: 0.5px 0.3px 1px rgba(255, 0, 0, 0.603);
+      }
+
+      .contactHeader,
+      .form_header {
+        color: #0e517ee8;
+      }
+      .infoContact {
+        padding: 13px 0;
+        .toWorkButton {
+          padding: 0;
+          border: 0;
+          &:hover {
             background-color: inherit;
-            border:0.5px #0b4870 solid ;
-            padding: 5px;
-            width: max-content;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: 12px;
-            color: #0b4870;
-            &:hover{
-                background-color: #0b4870;
-                color: white;
-            }
+            color: #be8e41;
+            text-decoration: underline;
+          }
         }
-        .disabled{
-            color: gray;
-            border-color: gray;
-            &:hover{
-                background-color: white;
-                color: gray;
-            }
-        }
-        .contactHeader,.form_header{
-            color: #0e517ee8;
-        }
-        .infoContact{
-            padding: 13px 0;
-            .toWorkButton{
-                padding: 0;
-                border: 0;
-                &:hover{
-                    background-color: inherit;
-                    color: #be8e41;
-                    text-decoration: underline;
-                }
-            }
-        }
+      }
     }
   }
 }
-@keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+.form_input {
+  border: 0.5px #0b4870 solid;
+  outline: none;
+  padding: 9px;
+  font-size: 15px;
+}
+textarea {
+  height: 90px;
+}
+.sendBtn {
+  background-color: inherit;
+  border: 0.5px #0b4870 solid;
+  padding: 5px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 12px;
+  color: #0b4870;
+  &:hover {
+    background-color: #0b4870;
+    color: white;
   }
+}
+.disabled {
+  color: gray;
+  border-color: gray;
+  &:hover {
+    background-color: white;
+    color: gray;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -20,6 +20,7 @@
       display: flex;
       list-style: none;
       height: 100%;
+
       .options_links {
         color: #222;
         align-items: center;
@@ -29,7 +30,7 @@
         &:nth-child(2) {
           padding: 9px;
         }
-        &:nth-child(3) {
+        &:last-child {
           color: #fefefe;
           background-color: #0b4870b4;
         }
@@ -37,6 +38,10 @@
           color: #fefefe;
           background-color: #e2a94eb7;
         }
+      }
+      .selected {
+        color: #fefefe;
+        background-color: #e2a94eb7;
       }
     }
   }

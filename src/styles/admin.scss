@@ -18,6 +18,10 @@
         border: #0b4870 1px solid;
         outline: none;
       }
+      .notAdmin{
+        border-color: red;
+        box-shadow: 0.2px 0.3px 0.5 rgba(255, 0, 0, 0.726);
+      }
       .adminSubmit {
         background-color: inherit;
         color: #0b4870;

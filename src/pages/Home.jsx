@@ -9,11 +9,11 @@ import {
   BsArrowRightShort,
 } from "react-icons/bs";
 import { useNavigate } from "react-router";
-const Home = () => {
+const Home = ({isAdmin,setIsAdmin}) => {
     const navigate = useNavigate()
   return (
     <div className="home">
-      <Navbar />
+      <Navbar homeSelected={true} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/>
       <div className="body">
         <div className="main">
           <div className="headers">
