@@ -80,6 +80,7 @@ const UploadWork = ({ isAdmin, setIsAdmin }) => {
         body:backgroundFormData
       })
       const data = await sentData.json()
+      console.log(data)
       setBackgroundUrl(`${serverUrl}images/${data[0].filename}`)
       const sentData2 = await fetch(`${serverUrl}imageupload`,{
         method :'POST',
@@ -92,8 +93,8 @@ const UploadWork = ({ isAdmin, setIsAdmin }) => {
       const upWork = {
         workTitle : work.title,
         workPhotos :{
-          background: backgroundUrl,
-          otherPhotos :othersUrl
+          background: `${serverUrl}images/${data[0].filename}`,
+          otherPhotos :otherUrl
         },
         links :{
           github : work.github,

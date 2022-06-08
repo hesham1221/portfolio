@@ -1,0 +1,57 @@
+.work_body{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    grid-area:30px;
+    place-items: center;
+    .awork{
+       width: 280px;
+       text-align: center;
+       cursor: pointer;
+       &:hover{
+           transform: scale(1.2);
+           transition: transform 0.3s;
+           .options{
+               display: flex;
+           }
+           .workTitle{
+               display: block;
+           }
+       }
+       height: 230px;
+        background-size: contain;
+        display: flex;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        justify-content: flex-end;
+        .workTitle{
+            color: gray;
+            font-size: 19px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: none;
+        }
+        .options{
+
+            display: none;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            .options_btn{
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+                font-size: 20px;
+                color: rgb(85, 85, 85);
+                &:hover{
+                    color: gray;
+                }
+            }
+            .dl{
+                margin-right: 9px;
+            }
+        }
+    }
+}
