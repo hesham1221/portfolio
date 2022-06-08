@@ -16,7 +16,7 @@ const Work = ({isAdmin,setIsAdmin}) => {
       }
     }
     getWork()
-  },[work])
+  },[])
   return (
     <div className='work'>
         <Navbar workSelected={true} setIsAdmin={setIsAdmin} isAdmin={isAdmin} />

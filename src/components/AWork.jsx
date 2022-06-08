@@ -2,7 +2,9 @@ import React from "react";
 import { MdDelete } from "react-icons/md";
 import { CgMoreAlt } from "react-icons/cg";
 import "../styles/aWork.scss";
+import { useNavigate } from "react-router-dom";
 const AWork = ({ work, isAdmin , setWork }) => {
+  const navigate = useNavigate()
   const server = 'http://localhost:5000/'
   console.log(work);
   async function deleteWork(id){
@@ -19,13 +21,16 @@ const AWork = ({ work, isAdmin , setWork }) => {
     }
 
   }
+  const goToWork = () =>{
+    navigate(`${work._id}`)
+  }
   return (
     <div
-      style={{
-        backgroundImage: `url(${work.workPhotos.background})`,
-      }}
       className="awork"
+      onClick={goToWork}
     >
+      <img src={work.workPhotos.background} alt="work background" className="workImg" />
+      <div className="underPhoto">
       <h2 className="workTitle">{work.workTitle}</h2>
       <div className="options">
         {isAdmin && (
@@ -33,9 +38,10 @@ const AWork = ({ work, isAdmin , setWork }) => {
             <MdDelete />
           </button>
         )}
-        <button className="options_btn">
+        <button onClick={goToWork} className="options_btn">
           <CgMoreAlt />
         </button>
+      </div>
       </div>
     </div>
   );

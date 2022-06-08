@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import UploadWork from "./pages/UploadWork";
 import Work from "./pages/Work";
+import WorkDetails from "./pages/WorkDetails";
 
 function App() {
   const [isAdmin,setIsAdmin] = useState(false)
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home setIsAdmin={setIsAdmin} isAdmin={isAdmin} />} />
           <Route path='/work' element={<Work setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>} />
           <Route path='/contact' element={<Contact setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>} />
+          <Route path='/work/:id' element={<WorkDetails setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>} />
           <Route path='/hadmin' element={<Admin isAdmin={isAdmin} setIsAdmin={setIsAdmin} />} />
           {isAdmin &&<Route path='/uploadwork' element={<UploadWork isAdmin={isAdmin} setIsAdmin={setIsAdmin}/>} />}
         </Routes>

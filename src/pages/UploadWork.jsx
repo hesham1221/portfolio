@@ -4,12 +4,12 @@ import "../styles/uploadwork.scss";
 import { FiUpload } from "react-icons/fi";
 import {AiFillGithub} from 'react-icons/ai'
 import {BsGlobe} from 'react-icons/bs'
+import { useNavigate } from "react-router-dom";
 const UploadWork = ({ isAdmin, setIsAdmin }) => {
+  const navigate = useNavigate()
   const serverUrl = 'http://localhost:5000/'
   const [work, setWork] = useState({});
   const [imgs, setImgs] = useState([]);
-  const [backgroundUrl,setBackgroundUrl] = useState('')
-  const [othersUrl,setothersUrl] = useState([''])
   const [imgDetails, setImgDetails] = useState([
     {
       url: "https://designshack.net/wp-content/uploads/placeholder-image.png",
@@ -81,7 +81,6 @@ const UploadWork = ({ isAdmin, setIsAdmin }) => {
       })
       const data = await sentData.json()
       console.log(data)
-      setBackgroundUrl(`${serverUrl}images/${data[0].filename}`)
       const sentData2 = await fetch(`${serverUrl}imageupload`,{
         method :'POST',
         body:otherFormData
@@ -89,7 +88,6 @@ const UploadWork = ({ isAdmin, setIsAdmin }) => {
       const data2 = await sentData2.json()
       console.log(data2)
       const otherUrl = data2.map(other => `${serverUrl}images/${other.filename}`)
-      setothersUrl(otherUrl)
       const upWork = {
         workTitle : work.title,
         workPhotos :{
@@ -111,6 +109,7 @@ const UploadWork = ({ isAdmin, setIsAdmin }) => {
       })
       const finalData = await sendWork.json()
       console.log(finalData)
+      navigate('../work')
     } catch (error) {
       console.log(error)
     }
