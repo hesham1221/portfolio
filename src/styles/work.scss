@@ -65,3 +65,38 @@
     }
   }
 }
+
+@media (max-width :1200px) {
+  .work_body{
+    .awork{
+    width: 340px;
+    height: 210px;
+    }
+  }
+}
+@media (max-width : 1080px) {
+  .work_body{
+    grid-template-columns: auto auto;
+    .awork{
+    width: 380px;
+    height: 250px;
+    }
+  }
+}
+@media (max-width : 800px) {
+  .work_body{
+    grid-template-columns: auto;
+    .awork{
+    width: 530px;
+    height: 300px;
+    }
+  }
+}
+@media (max-width : 600px) {
+  .work_body{
+    .awork{
+    width: 80vw;
+    height: auto;
+    }
+  }
+}

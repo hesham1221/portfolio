@@ -11,7 +11,7 @@ const Admin = ({isAdmin , setIsAdmin}) => {
     e.preventDefault()
    try{
 
-       const res = await fetch('http://localhost:5000/login',{
+       const res = await fetch('https://hportofolio.herokuapp.com/login',{
         method : 'POST',
         headers :{
             "Content-type": "application/json; charset=UTF-8"
@@ -22,6 +22,7 @@ const Admin = ({isAdmin , setIsAdmin}) => {
         })
     })
     const data = await res.json()
+    console.log(data)
     if (data.message === 'welcome back hesham'){
         setIsAdmin(true)
         navigate('../work',{replace : true})

@@ -5,16 +5,14 @@ import "../styles/aWork.scss";
 import { useNavigate } from "react-router-dom";
 const AWork = ({ work, isAdmin , setWork }) => {
   const navigate = useNavigate()
-  const server = 'http://localhost:5000/'
+  const server = 'https://hportofolio.herokuapp.com/'
   console.log(work);
   async function deleteWork(id){
-    console.log(id)
     try {
       const fData = await fetch(`${server}singlework/${id}`,{
         method : 'DELETE'
       })
-      const data = fData.json()
-      console.log(data)
+      await fData.json()
       setWork((prev) => prev.filter(work => work.id !== id))
     } catch (err) {
       console.log(err)
@@ -27,9 +25,8 @@ const AWork = ({ work, isAdmin , setWork }) => {
   return (
     <div
       className="awork"
-      onClick={goToWork}
     >
-      <img src={work.workPhotos.background} alt="work background" className="workImg" />
+      <img onClick={goToWork} src={work.workPhotos.background} alt="work background" className="workImg" />
       <div className="underPhoto">
       <h2 className="workTitle">{work.workTitle}</h2>
       <div className="options">

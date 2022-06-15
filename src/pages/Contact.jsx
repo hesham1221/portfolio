@@ -10,6 +10,7 @@ import {
   BsArrowRightShort,
 } from "react-icons/bs";
 import { useNavigate } from "react-router";
+import Loading from "../components/Loading";
 const Contact = ({isAdmin,setIsAdmin}) => {
   const [suc, setsuc] = useState(false);
   const [fai, setFai] = useState(false);
@@ -52,9 +53,7 @@ const Contact = ({isAdmin,setIsAdmin}) => {
               </h1>
             )}
             {loading && (
-              <div className="spinner-container">
-                <div className="loading-spinner"></div>
-              </div>
+              <Loading />
             )}
           </div>
           <h2 className="form_header">Name :</h2>
@@ -95,9 +94,15 @@ const Contact = ({isAdmin,setIsAdmin}) => {
             <AiOutlineSend />
           </button>
           <div className="info infoContact">
-            <BsGithub className="infoIcons" />
-            <BsLinkedin className="infoIcons" />
-            <BsFacebook className="infoIcons" />
+          <a href="https://github.com/hesham1221" className="about_link" target='_blank' rel="noreferrer">
+                <BsGithub className="infoIcons" />
+              </a>
+              <a href="https://www.linkedin.com/in/hesham-mohmed-5a0a47221/"  className="about_link" target='_blank' rel="noreferrer">
+                <BsLinkedin className="infoIcons" />
+              </a>
+              <a href="https://www.facebook.com/hesham.sadoun1221/"  className="about_link" target='_blank' rel="noreferrer">
+                <BsFacebook className="infoIcons" />
+              </a>
             <span onClick={() => navigate("../work")} className="toWorkButton">
               My Work
               <BsArrowRightShort />

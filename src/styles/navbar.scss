@@ -8,6 +8,7 @@
   top: 0;
   margin-bottom: 9px;
   background-color: white;
+  z-index: 3000;
   .logo {
     font-size: 40px;
     font-weight: bold;
@@ -15,6 +16,23 @@
     margin-left: 20px;
     margin-top: -5px;
     cursor: pointer;
+  }
+  @media (max-width:600px) {
+    .logo{
+      font-size: 25px;
+      align-items: center;
+      display: flex;
+      margin-top: 3px;
+    }
+  }
+  @media (max-width : 420px) {
+    .logo{
+      font-size: 20px;
+      align-items: center;
+      display: flex;
+      font-weight: 900;
+      margin-left: 5px;
+    }
   }
   .options {
     .options_list {
@@ -40,6 +58,13 @@
           background-color: #e2a94eb7;
         }
       }
+      @media (max-width : 420px) {
+        .options_links{
+          padding: 5px 14px;
+          font-size: 14px;
+        }
+      }
+
       .selected {
         color: #fefefe;
         background-color: #e2a94eb7;

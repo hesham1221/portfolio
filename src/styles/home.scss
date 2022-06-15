@@ -2,6 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1030px) {
+        .main{
+            flex-direction: column-reverse;
+            text-align: center;
+            .info{
+                justify-content: center;
+            }
+        }
+    }
     .main{
         display: flex;
         align-items: center;
@@ -21,6 +30,27 @@
         .body_img{
             height: 570px;
             width: 700px;
+        }
+        @media (max-width : 1030px) {
+            .body_img{
+                height: 500px;
+                width: auto;
+            }
+        }
+        @media (max-width : 720px) {
+            .body_img{
+                height: 400px;
+                width: auto;
+            }
+        }
+        @media (max-width : 500px) {
+            .body_img{
+                height: 330px;
+                width: auto;
+            }
+            .body_header{
+                font-size: 28px;
+            }
         }
     }
 }

@@ -1,5 +1,7 @@
 .contact {
+  
   .formContainer {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +21,7 @@
         .fai {
           color: red;
         }
-        .loading-spinner {
-          width: 30px;
-          height: 30px;
-          border: 5px solid #f3f3f3; /* Light grey */
-          border-top: 5px solid #be8e41; /* Black */
-          border-radius: 50%;
-          animation: spinner 1.5s linear infinite;
-        }
+       
       }
       .success {
         border-color: green;
@@ -54,6 +49,11 @@
             text-decoration: underline;
           }
         }
+      }
+    }
+    @media (max-width : 720px) {
+      .conatctForm{
+        width: 70%;
       }
     }
   }
@@ -92,11 +92,4 @@ textarea {
     color: gray;
   }
 }
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
