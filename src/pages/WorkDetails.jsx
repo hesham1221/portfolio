@@ -8,7 +8,7 @@ import Loading from "../components/Loading";
 const WorkDetails = ({ isAdmin }) => {
   const [viewedPhoto, setViewedPhoto] = useState("");
   const [work, setWork] = useState([]);
-  const server = "https://portofolio-back.onrender.com";
+  const server = "https://portofolio-back.onrender.com/";
   const { id } = useParams();
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {

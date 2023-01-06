@@ -5,14 +5,13 @@ import "../styles/aWork.scss";
 import { useNavigate } from "react-router-dom";
 const AWork = ({ work, isAdmin , setWork }) => {
   const navigate = useNavigate()
-  const server = 'https://portofolio-back.onrender.com'
+  const server = 'https://portofolio-back.onrender.com/'
   console.log(work);
   async function deleteWork(id){
     try {
-      const fData = await fetch(`${server}singlework/${id}`,{
+      await fetch(`${server}singlework/${id}`,{
         method : 'DELETE'
       })
-      await fData.json()
       setWork((prev) => prev.filter(work => work.id !== id))
     } catch (err) {
       console.log(err)

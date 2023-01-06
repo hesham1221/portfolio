@@ -11,7 +11,7 @@ const Admin = ({isAdmin , setIsAdmin}) => {
     e.preventDefault()
    try{
 
-       const res = await fetch('https://portofolio-back.onrender.comlogin',{
+       const res = await fetch('https://portofolio-back.onrender.com/login',{
         method : 'POST',
         headers :{
             "Content-type": "application/json; charset=UTF-8"
