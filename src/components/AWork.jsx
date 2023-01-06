@@ -5,7 +5,7 @@ import "../styles/aWork.scss";
 import { useNavigate } from "react-router-dom";
 const AWork = ({ work, isAdmin , setWork }) => {
   const navigate = useNavigate()
-  const server = 'https://hportofolio.herokuapp.com/'
+  const server = 'https://portofolio-back.onrender.com'
   console.log(work);
   async function deleteWork(id){
     try {

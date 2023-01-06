@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import "../styles/work.scss";
 const Work = ({ isAdmin, setIsAdmin }) => {
   const [work, setWork] = useState([]);
-  const server = "https://hportofolio.herokuapp.com/";
+  const server = "https://portofolio-back.onrender.com";
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const getWork = async () => {

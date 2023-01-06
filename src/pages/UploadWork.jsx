@@ -12,7 +12,7 @@ const UploadWork = ({ isAdmin, setIsAdmin }) => {
   const [togalModal, setTogalModal] = useState(false);
   const [progress, setProgress] = useState(0);
   const navigate = useNavigate();
-  const serverUrl = "https://hportofolio.herokuapp.com/";
+  const serverUrl = "https://portofolio-back.onrender.com";
   const [work, setWork] = useState({});
   const [imgs, setImgs] = useState([]);
   const [nameImg, setNameImg] = useState("");
